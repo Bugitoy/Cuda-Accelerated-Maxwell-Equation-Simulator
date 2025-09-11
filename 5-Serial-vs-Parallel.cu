@@ -1,3 +1,39 @@
+// Serial vs Parallel
+
+// Segmented Sum
+
+// A segmented sum is defined as taking a single input array and, given a 
+// segment size, calculating the sum of each segment. 
+
+// We could build a segmented sum on top of thrust::tabulate. The tabulate 
+// algorithm receives a sequence and a function. It then applies this 
+// function to index of each element in the sequence, and stores the 
+// result into the provided sequence. For example, after the following invocation:
+
+thrust::universal_vector<int> vec(4);
+thrust::tabulate(
+   thrust::device, vec.begin(), vec.end(), 
+   []__host__ __device__(int index) -> int { 
+      return index * 2; 
+   })
+
+// vec would store {0, 2, 4, 6}. We can use this algorithm to implement our 
+// segmented sum as follows:
+
+// vec would store {0, 2, 4, 6}. We can use this algorithm to implement our segmented sum as follows:
+
+thrust::universal_vector<float> sums(num_segments);
+thrust::tabulate(
+   thrust::device, sums.begin(), sums.end(), 
+   []__host__ __device__(int segment_id) -> float {
+      return compute_sum_for(segment_id);
+   })
+
+// Reduction is a memory-bound algorithm. This means that instead of analyzing its performance in 
+// terms of elapsed time, we could take a look at how many bytes does our implementation process 
+// in a second. This metric is called achieved throughput. By contrasting it with the peak theoretical 
+// bandwidth of our GPU, we'll understand if our implementation is efficient or not.
+
 %%writefile Sources/naive-segmented-sum.cu
 #include <cstdio>
 #include <chrono>
