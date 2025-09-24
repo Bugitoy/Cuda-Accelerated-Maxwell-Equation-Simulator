@@ -1,3 +1,7 @@
+// Vocabulary Types
+
+// C++ Standard Library Types
+
 // Naive Heat Transfer
 
 // Below is the code for the naive simulate function. Execute the following 

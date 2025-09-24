@@ -1,3 +1,5 @@
+// Extending Standard Algorithms
+
 // Inefficient implementation of max difference:
 
 %%writefile Sources/naive-max-diff.cu
