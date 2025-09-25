@@ -267,7 +267,7 @@ int main()
 
 // CUDA Fancy Iterators
 
-//CUDA Core Libraries provide a variety of iterators. 
+// CUDA Core Libraries provide a variety of iterators. 
 // Let's take a look at some of them as we try to improve the performance 
 // of our inner product implementation. The first step is computing the absolute 
 // differences of corresponding vector components. To do that, we have to somehow 
