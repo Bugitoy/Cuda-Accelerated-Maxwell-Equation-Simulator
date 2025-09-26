@@ -171,7 +171,7 @@ void histogram(cuda::std::span<float> temperatures,
   histogram_kernel<<<grid_size, block_size, 0, stream>>>(
     temperatures, histogram);
 }
-
+    
 // Solution
 
 // Key points:
