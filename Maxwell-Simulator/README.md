@@ -22,3 +22,9 @@ Performance summary:
 - Baseline CPU: ~197,402,344 cells/s.
 - CUDA port: ~4,887,778,050 cells/s.
 - With coarse tiling and `cub::BlockReduce`: ~4,902,636,317 cells/s.
+
+### Images
+
+![How it works diagram](./images/HowItWorks.png)
+
+![Fine-grain Maxwell animation](./images/fine-grain-maxwell-animation.png)
