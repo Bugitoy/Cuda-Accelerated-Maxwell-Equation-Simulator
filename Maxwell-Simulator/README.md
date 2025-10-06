@@ -25,6 +25,12 @@ Performance summary:
 
 ### Images
 
+![Fine-grain Maxwell animation](./images/fine-grain-maxwell-animation.png)
+
+##  How the coarse.cu code works:
+
 ![How it works diagram](./images/HowItWorks.png)
 
-![Fine-grain Maxwell animation](./images/fine-grain-maxwell-animation.png)
+##  How the coarse.cu animation would look like:
+
+![Grainier Maxwell animation](./images/Grainier-animation-of-Maxwell-Equation.png)
